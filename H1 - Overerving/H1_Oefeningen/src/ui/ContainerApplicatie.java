@@ -16,11 +16,13 @@ public class ContainerApplicatie {
 		containers.add(new Container("Brugge", 70, 100, 8564));
 
 		Container nieuweContainer = new Container("Antwerpen", 70, 75, 8564);
+		
 
-		// Kijk na of de nieuwe container reeds in de lijst aanwezig is en
-		// druk het resultaat af op het scherm.
+		// Kijk na of de nieuwe container reeds in de lijst aanwezig is en druk het
+		// resultaat af op het scherm.
 
-		System.out.println(nieuweContainer.equals(containers) ? "De container was reeds toegevoegd aan de lijst"
-				: "De container is toegevoegd aan de lijst");
+		System.out.println(containers.contains(nieuweContainer) ? "De container werd reeds toegevoegd aan de lijst."
+				: "De container is toegevoegd aan de lijst.");
+
 	}
 }
