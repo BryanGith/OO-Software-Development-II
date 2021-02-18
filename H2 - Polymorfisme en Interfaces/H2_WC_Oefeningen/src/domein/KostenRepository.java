@@ -11,10 +11,14 @@ public class KostenRepository {
 
 	public KostenRepository() {
 		beheersKostenMapper = new BeheersKostenMapper();
-		kosten = beheersKostenMapper.geefBeheersKosts;
+		kosten = beheersKostenMapper.geefBeheersKosten();
 	}
 
 	public List<BeheersKost> getKosten() {
 		return kosten;
+	}
+
+	public BeheersKost geefBeheersKost(int index) {
+		return kosten.get(index);
 	}
 }
