@@ -4,7 +4,7 @@ Oefeningen Software Development II\
 
 <strong>Inhoudstabel:</strong>\
 <strong>Hoofdstuk 1: Overerving deel 2</strong>\
-Hoofdstuk 2: Polymorfisme & interfaces\
+<strong>Hoofdstuk 2: Polymorfisme & interfaces</strong>\
 Hoofdstuk 3: Lambda expressies\
 Hoofdstuk 4: Exception handling\
 Hoofdstuk 5: Grafische userinterface - JavaFX\
