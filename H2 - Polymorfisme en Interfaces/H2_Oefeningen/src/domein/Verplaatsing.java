@@ -1,6 +1,6 @@
 package domein;
 
-public class Verplaatsing
+public class Verplaatsing implements Kosten
 {
     private String van;
     private String naar;
@@ -53,4 +53,9 @@ public class Verplaatsing
     {
         return String.format("verplaatsing van %s naar %s", van, naar);
     }
+
+	@Override
+	public double berekenPrijs() {
+		return 0;
+	}
 }

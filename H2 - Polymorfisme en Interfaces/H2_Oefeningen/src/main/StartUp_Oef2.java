@@ -1,11 +1,13 @@
 package main;
 
-import ui.VerplaatsingApplicatie;
+import domein.DomeinController_Oef2;
+import ui.VoorwerpApplicatie;
 
 public class StartUp_Oef2 
 {
     public static void main(String[] args) 
     {
-        new VerplaatsingApplicatie().start();
+        DomeinController_Oef2 dc = new DomeinController_Oef2();
+        new VoorwerpApplicatie(dc).start();
     }
 }

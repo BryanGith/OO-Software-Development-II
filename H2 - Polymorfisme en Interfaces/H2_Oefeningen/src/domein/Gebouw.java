@@ -8,7 +8,7 @@ public class Gebouw implements Draagbaar {
 	public Gebouw(String naam, double hoogte) {
 		super();
 		this.naam = naam;
-		this.hoogte = hoogte;
+		controleerHoogte(hoogte);
 	}
 
 	private void controleerNaam(String naam) {
@@ -16,10 +16,12 @@ public class Gebouw implements Draagbaar {
 	}
 
 	private void controleerHoogte(double hoogte) {
-
+		if (hoogte < 3) {
+			this.hoogte = 3;
+		} else {
+			this.hoogte = hoogte;
+		}
 	}
-	
-	
 
 	public String getNaam() {
 		return naam;
@@ -40,6 +42,12 @@ public class Gebouw implements Draagbaar {
 	@Override
 	public boolean isDraagbaar() {
 		return false;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("residentie %s met hoogte %.2f is %s", naam, hoogte,
+				isDraagbaar() ? "draagbaar" : "niet draagbaar");
 	}
 
 }

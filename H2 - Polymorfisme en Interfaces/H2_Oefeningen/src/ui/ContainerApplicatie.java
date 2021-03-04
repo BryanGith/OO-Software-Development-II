@@ -6,7 +6,8 @@ import java.util.Comparator;
 import java.util.List;
 
 import domein.Container;
-import domein.MassaCompare;
+import domein.MassaComparator;
+import domein.OwnerComparator;
 
 public class ContainerApplicatie {
 
@@ -27,7 +28,7 @@ public class ContainerApplicatie {
 		}
 
 		// Stap 2
-		Collections.sort(containers, new MassaCompare());
+		Collections.sort(containers, new MassaComparator());
 		System.out.println("Containers bij sorteren op massa: ");
 		for (Container container : containers) {
 			System.out.printf("%dkg - %s - %dm²%n", container.getMassa(), container.getEigenaar(),
@@ -35,6 +36,11 @@ public class ContainerApplicatie {
 		}
 
 		// Stap 3
-
+		Collections.sort(containers, new OwnerComparator());
+		System.out.println("Containers sorteren op eigenaar:");
+		for (Container container : containers) {
+			System.out.printf("%s - %dm² - %dkg%n", container.getEigenaar(), container.getVolume(),
+					container.getMassa());
+		}
 	}
 }

@@ -18,5 +18,7 @@ public class VoorwerpApplicatie {
 		dc.voegSleutelToe("Achterdeur", 0.5, 1, 2);
 		System.out.println("Na het toevoegen van enkele wapens en sleutels:");
 		System.out.printf("%s", dc.toonOverzicht());
+		dc.voegGebouwToe("Frankenstein", 4.5);
+		System.out.printf("%s", dc.toonOverzicht());
 	}
 }

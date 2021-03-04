@@ -2,7 +2,7 @@ package domein;
 
 import java.util.Comparator;
 
-public class MassaCompare implements Comparator<Container> {
+public class MassaComparator implements Comparator<Container> {
 
 	@Override
 	public int compare(Container c1, Container c2) {

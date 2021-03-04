@@ -50,10 +50,11 @@ public class Voorwerp implements Draagbaar {
 
 	@Override
 	public boolean isDraagbaar() {
-		if (gewicht < 50) {
-			return true;
-		}
-		return false;
+		return gewicht < 50;
+//		if (gewicht < 50) {
+//			return true;
+//		}
+//		return false
 	}
 
 	@Override
