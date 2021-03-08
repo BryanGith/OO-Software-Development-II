@@ -21,11 +21,11 @@ public class VerplaatsingPerBusTram extends Verplaatsing
             throw new IllegalArgumentException("Lijnnummer moet positief zijn!");
         this.lijnnr = lijnnr;
     }
-    private void setBus(boolean bus) 
+    public final void setBus(boolean bus) 
     {
         this.bus = bus;
     }
-    private void setStadslijn(boolean stadslijn) 
+    public final void setStadslijn(boolean stadslijn) 
     { 
         this.stadslijn = stadslijn;
     }
@@ -47,6 +47,7 @@ public class VerplaatsingPerBusTram extends Verplaatsing
         return String.format("%s met %s%d", super.toString(),(isStadslijn() ? "stads" : "") 
                 + (isBus() ? "bus " : "tram "), lijnnr);
     }
+    @Override
     public double berekenPrijs() 
     {
         int aantalHaltes = (int) Math.ceil(getAantalKm());

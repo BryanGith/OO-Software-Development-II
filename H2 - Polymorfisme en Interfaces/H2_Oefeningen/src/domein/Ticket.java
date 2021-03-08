@@ -1,42 +1,51 @@
 package domein;
 
-public class Ticket implements Kosten {
-	private String omschrijving;
-	private double prijs;
+public class Ticket implements Kosten
+{
+    private String omschrijving;
+    private double prijs;
 
-	public Ticket(String omschrijving, double prijs) {
-		super();
-		this.omschrijving = omschrijving;
-		this.prijs = prijs;
-	}
+    public Ticket(String omschrijving, double prijs)
+    {
+        setOmschrijving(omschrijving);        
+        setPrijs(prijs);     
+    }
 
-	@Override
-	public String toString() {
-		return String.format("%20s%10.2f", omschrijving, prijs);
-	}
+    public final void setOmschrijving(String omschrijving)
+    {
+         if (omschrijving == null || omschrijving.trim().isEmpty())
+            throw new IllegalArgumentException("Elk ticket moet verplicht een omschrijving hebben.");
+         this.omschrijving = omschrijving;
+    }
+    
+    public final void setPrijs(double prijs){
+        if (prijs <= 0)
+        {
+            throw new IllegalArgumentException("Prijs van het ticket moet groter dan 0 zijn!");
+        }
+        this.prijs = prijs;
+    }
+    
+    public String getOmschrijving()
+    {
+        return omschrijving;
+    }
 
-	@Override
-	public double berekenPrijs() {
-		return prijs;
-	}
+    public double getPrijs()
+    {
+        return prijs;
+    }
 
-	public String getOmschrijving() {
-		return omschrijving;
-	}
+    @Override
+    public String toString()
+    {
+        return String.format("%20s%10.2f", omschrijving, prijs);
+    }
 
-	public void setOmschrijving(String omschrijving) {
-		this.omschrijving = omschrijving;
-	}
-
-	public double getPrijs() {
-		return prijs;
-	}
-
-	public void setPrijs(double prijs) {
-		if (prijs < 0) {
-			throw new IllegalArgumentException();
-		}
-		this.prijs = prijs;
-	}
+    @Override
+    public double berekenPrijs()
+    {
+        return prijs;
+    }
 
 }

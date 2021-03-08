@@ -13,7 +13,6 @@ public class VerplaatsingPerAuto extends Verplaatsing
         setVerbruik(verbruik);
     }
     
-  
     public final void setBenzineprijs(double benzineprijs) 
     { 
         if (benzineprijs < 0.5 || benzineprijs > 2)
@@ -43,6 +42,7 @@ public class VerplaatsingPerAuto extends Verplaatsing
     { 
         return String.format("%s per auto", super.toString()); 
     }
+    @Override
     public double berekenPrijs() 
     {
         return 2 * verbruik * benzineprijs * getAantalKm();
