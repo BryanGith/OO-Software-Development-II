@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="H5_WC_Oefeningen_Deel1/src"/>
+	<classpathentry kind="src" path="Voorbeelden/DemoEventAfhandeling/src"/>
+	<classpathentry kind="src" path="Voorbeelden/FXVoorbeeld1/src"/>
+	<classpathentry kind="src" path="Voorbeelden/FXVoorbeeld2/src"/>
+	<classpathentry kind="src" path="Voorbeelden/FXVoorbeeld3/src"/>
+	<classpathentry kind="src" path="Voorbeelden/FXVoorbeeld4/src"/>
+	<classpathentry kind="src" path="Voorbeelden/FXVoorbeeld5/src"/>
+	<classpathentry kind="src" path="Voorbeelden/FXVoorbeeld6/src"/>
+	<classpathentry kind="src" path="Voorbeelden/FXVoorbeeld7/src"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="output" path="H5_WC_Oefeningen_Deel1/bin"/>
+</classpath>

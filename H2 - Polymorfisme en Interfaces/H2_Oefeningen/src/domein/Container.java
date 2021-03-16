@@ -1,8 +1,5 @@
 package domein;
 
-import java.io.*;
-import java.util.*;
-
 public class Container implements Comparable<Container> {
 
 	private String eigenaar;
