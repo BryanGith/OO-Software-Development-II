@@ -18,5 +18,7 @@ public class HoofdPaneel extends BorderPane
 
         DetailPaneel dp = new DetailPaneel(controller);
         this.setCenter(dp);
+        OverzichtPaneel op = new OverzichtPaneel(controller, dp);
+        this.setLeft(op);
     }
 }

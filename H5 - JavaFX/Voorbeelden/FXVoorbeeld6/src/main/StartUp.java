@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import domein.TipCalculator;        //vervult de functie van domeinController
-import gui.TipCalculatorScherm;
+import gui.TipCalculatorSchermController;
 
 public class StartUp extends Application
 {
@@ -15,7 +15,7 @@ public class StartUp extends Application
     public void start(Stage primaryStage) 
     {
         TipCalculator dc = new TipCalculator();
-        TipCalculatorScherm root = new TipCalculatorScherm(dc);
+        TipCalculatorSchermController root = new TipCalculatorSchermController(dc);
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("TipCalculator");

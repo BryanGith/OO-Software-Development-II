@@ -7,6 +7,7 @@ module FXRodeDraadDeel2Startversie {
 	requires javafx.base;
 	requires javafx.controls;
 	requires javafx.graphics;
+	requires javafx.fxml;
 	
-	opens gui to javafx.graphics;
+	opens gui to javafx.graphics, javafx.fxml;
 }

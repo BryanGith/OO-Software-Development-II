@@ -6,6 +6,7 @@ module FXVoorbeeld6 {
 	requires javafx.base;
 	requires javafx.controls;
 	requires javafx.graphics;
+	requires javafx.fxml;
 	
 	opens gui to javafx.graphics;
 }
