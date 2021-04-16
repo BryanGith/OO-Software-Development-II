@@ -1,5 +1,5 @@
 # OO-Software-Development-II
-<strong>DISCLAIMER:</strong>\ Gelieve geen code van mij te kopiëren op het examen ivm fraude!
+<strong>DISCLAIMER:</strong>Gelieve geen code van mij te kopiëren op het examen ivm fraude!
 Oefeningen Software Development II\
 
 <strong>Inhoudstabel:</strong>\
@@ -8,6 +8,6 @@ Oefeningen Software Development II\
 <strong>Hoofdstuk 3: Lambda expressies</strong>\
 <strong>Hoofdstuk 4: Exception handling</strong>\
 <strong>Hoofdstuk 5: Grafische userinterface - JavaFX<strong>\
-Hoofdstuk 6: Functioneel programmeren - streams\
-Hoofdstuk 7: Strings & reguliere expressies\
+Hoofdstuk 6: Functioneel programmeren - streams
+Hoofdstuk 7: Strings & reguliere expressies
 Hoofdstuk 8: Bestandsverwerking
