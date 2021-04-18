@@ -7,7 +7,7 @@ Oefeningen Software Development II\
 <strong>Hoofdstuk 2: Polymorfisme & interfaces</strong> - volledig\
 <strong>Hoofdstuk 3: Lambda expressies</strong> - volledig\
 <strong>Hoofdstuk 4: Exception handling</strong> - volledig\
-<strong>Hoofdstuk 5: Grafische userinterface - JavaFX</strong>\
+<strong>Hoofdstuk 5: Grafische userinterface - JavaFX</strong> - volledig\
 Hoofdstuk 6: Functioneel programmeren - streams\
 Hoofdstuk 7: Strings & reguliere expressies\
 Hoofdstuk 8: Bestandsverwerking
