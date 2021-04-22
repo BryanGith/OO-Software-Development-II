@@ -1,0 +1,11 @@
+package main;
+
+import domein.DomeinController;
+import cui.VoorbeeldApplicatie;
+
+public class StartUp_Oef2 {
+	public static void main(String[] args) {
+		new VoorbeeldApplicatie(new DomeinController()).start();
+	}
+
+}

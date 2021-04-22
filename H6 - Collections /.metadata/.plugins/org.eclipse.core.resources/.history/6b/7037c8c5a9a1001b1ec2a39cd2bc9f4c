@@ -1,0 +1,69 @@
+package domein;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Garage {
+	private List<Onderhoud> onderhoudLijst;
+
+	// implementeer:
+	// stop alle onderhouden (~parameter) in het attribuut onderhoudLijst
+	public Garage(Collection<Onderhoud> onderhouden) {
+		onderhoudLijst = new ArrayList<>(onderhouden);
+	}
+
+	// implementeer:
+	// retourneer een Collection met alle unieke auto's uit de onderhoudLijst
+	// tip: voeg alle auto's uit de onderhoudLijst toe aan een Set om de unieke
+	// auto's te hebben
+	public Collection<Auto> geefAutosVoorOnderhoud() {
+		Set<Auto> autosVoorOnderhoud = new HashSet<>();
+		for (Onderhoud onderhoud : onderhoudLijst) {
+			autosVoorOnderhoud.add(onderhoud.getAuto());
+		}
+		return autosVoorOnderhoud;
+	}
+
+	public Collection<Onderhoud> getOnderhoudLijst() {
+		return onderhoudLijst;
+	}
+
+	// implementeer:
+	// sorteer de onderhoudLijst op Auto (natuurlijk ordening op nummerplaat)
+	// vervolgens sorteer je voor gelijke auto's op begindatum van het onderhoud
+	public void sorteerOnderhoudLijst() {
+		Comparator<Onderhoud> comparator = new Comparator<Onderhoud>() {
+
+			@Override
+			public int compare(Onderhoud o1, Onderhoud o2) {
+				if (o1.getAuto().equals(o2.getAuto())) {
+					return o1.getBegindatum().compareTo(o2.getBegindatum());
+				}
+				return o1.getAuto().compareTo(o2.getAuto());
+			}
+		};
+
+		Collections.sort(onderhoudLijst, comparator);
+	}
+
+	// implementeer:
+	// - indien je dit nog niet deed, implementeer dan eerst de methode
+	// isAangrenzendMet in de klasse Onderhoud
+	// - roep de hulpmethode sorteerOnderhoudLijst aan om de onderhoudLijst
+	// eerst te sorteren, en
+	// - voeg dan alle aangrenzende onderhouden samen tot 1 onderhoud
+	public void voegAangrenzendeOnderhoudenSamen() {
+		sorteerOnderhoudLijst();
+
+		for (int i = 0; i < onderhoudLijst; i++) {
+
+		}
+
+	}
+
+}

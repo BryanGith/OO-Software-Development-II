@@ -1,0 +1,134 @@
+package cui;
+
+import java.util.*;
+
+public class OefLinkedList_opgave {
+
+	public OefLinkedList_opgave() {
+
+//creëer een Integer-array "getallen" en initialiseer met 4, 3, 9 en 7
+//-------------------------------------------------------------------
+		Integer getallen[] = { 4, 3, 9, 7 };
+
+//creëer een 'arrayList' en vul op met de array "getallen" (1 instructie)
+//-----------------------------------------------------------------------------------
+		List<Integer> arrayList = Arrays.asList(getallen); // arrayList met vaste lengte (4)
+
+//creëer de linkedList "lijstInteger" en vul op met de inhoud van de arrayList ( 1 instructie )
+//--------------------------------------------------------------------------------
+		List<Integer> lijstInteger = new LinkedList<>(arrayList);
+
+//Voeg vooraan in "lijstInteger" getal 2 toe
+//------------------------------------------------
+		lijstInteger.add(0, 2);
+
+//Voeg achteraan in "lijstInteger" getal 12 toe
+//---------------------------------------------------
+		lijstInteger.add(12);
+		weergevenLijst("oplossing: 2 4 3 9 7 12", lijstInteger);
+
+//Verwijder het eerste element van "lijstInteger" en toon op het scherm d.m.v. printf
+//----------------------------------------------------------------
+		System.out.printf("%s%n%s", "oplossing: 2", "           ");
+		int eersteElement = lijstInteger.remove(0);
+		System.out.printf("%d", eersteElement);
+
+		metEenVerhogen(lijstInteger);
+		weergevenLijst("oplossing: 5 4 10 8 13", lijstInteger);
+
+		metEenVerhogen(lijstInteger);
+		weergevenLijst("oplossing: 6 5 11 9 14", lijstInteger);
+
+		elementenMetOnevenIndexVerwijderen(lijstInteger);
+		weergevenLijst("oplossing: 6 11 14", lijstInteger);
+
+		elementenToevoegenNaOnevenGetallen(lijstInteger);
+		weergevenLijst("oplossing: 6 11 13 14", lijstInteger);
+
+		String woorden[] = { "aaa", "bbb", "ccc", "ddd", "eee", "fff" };
+
+//creëer de LinkedList "lijstString" en vul op met de array "woorden" (1 instructie)
+//-----------------------------------------------------------------------
+		List<String> lijstString = new LinkedList<>(Arrays.asList(woorden));
+		elementenMetOnevenIndexVerwijderen(lijstString);
+
+		weergevenLijst("oplossing: aaa ccc eee", lijstString);
+
+		weergevenLijstOmgekeerdeVolgorde("oplossing: eee ccc aaa", lijstString);
+
+	}
+
+	public void metEenVerhogen(List<Integer> lijst) // ------------
+	{
+		// Alle elementen van de lijst wijzigen:
+		// alle elementen worden met één verhoogd
+		ListIterator<Integer> listIterator = lijst.listIterator();
+
+		while (listIterator.hasNext()) {
+			listIterator.set(listIterator.next() + 1);
+
+		}
+
+	}
+
+	public void elementenMetOnevenIndexVerwijderen(List<?> lijst) {
+		// Alle elementen, met oneven index, verwijderen (enkel met een iterator werken)
+		// -----------------------------------------------------------------------------
+		Iterator<?> iterator = lijst.iterator();
+
+		while (iterator.hasNext()) {
+			// bij elke iteratie gaan we 2 elementen bekijken
+			// 1e element mag blijven (element op index 0,2,4,...
+			iterator.next();
+
+			if (iterator.hasNext()) { // is er nog een volgende (oneven aantal - nee, even aantal - ja
+				// 2de element moet worden verwijderd (element op index 1,3,5,...
+				iterator.next();
+				iterator.remove();
+			}
+
+		}
+
+	}
+
+	public void elementenToevoegenNaOnevenGetallen(List<Integer> lijst) // -----------
+	// Na ieder oneven getal wordt hetzelfde getal+2 toegevoegd in de Lijst
+	// vb. 5 10 13 wordt 5 7 10 13 15
+	// ---------------------------------------------------
+	{
+		ListIterator<Integer> listIterator = lijst.listIterator();
+		while (listIterator.hasNext()) {
+			int element = listIterator.next();
+			if (element % 2 != 0) {
+				listIterator.add(element + 2);
+			}
+		}
+	}
+
+	public void weergevenLijst(String oplossing, Collection<?> lijst) {
+		System.out.printf("%s%n%s", oplossing, "           ");
+		Iterator<?> iterator = lijst.iterator();
+		while (iterator.hasNext()) {
+			System.out.printf("%s ", iterator.next());
+		}
+		System.out.println();
+	}
+
+	public void weergevenLijstOmgekeerdeVolgorde(String oplossing, List<?> lijst) {
+		// Alle elementen van de List<Integer> in omgekeerde volgorde weergeven
+		// --------------------------------------------------------------------------------------
+		System.out.printf("%s%n%s", oplossing, "           ");
+
+		ListIterator<?> listIterator = lijst.listIterator(lijst.size());
+
+		while (listIterator.hasPrevious()) {
+			System.out.printf("%s ", listIterator.previous());
+		}
+
+		System.out.println();
+	}
+
+	public static void main(String args[]) {
+		new OefLinkedList_opgave();
+	}
+}

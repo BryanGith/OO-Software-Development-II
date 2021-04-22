@@ -1,0 +1,45 @@
+package domein;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+public class Garage {
+	private List<Onderhoud> onderhoudLijst;
+
+	// implementeer:
+	// stop alle onderhouden (~parameter) in het attribuut onderhoudLijst
+	public Garage(Collection<Onderhoud> onderhouden) {
+		onderhoudLijst = new ArrayList<>(onderhouden);
+	}
+
+	// implementeer:
+	// retourneer een Collection met alle unieke auto's uit de onderhoudLijst
+	// tip: voeg alle auto's uit de onderhoudLijst toe aan een Set om de unieke
+	// auto's te hebben
+	public Collection<Auto> geefAutosVoorOnderhoud() {
+		return null;
+	}
+
+	public Collection<Onderhoud> getOnderhoudLijst() {
+		return onderhoudLijst;
+	}
+
+	// implementeer:
+	// sorteer de onderhoudLijst op Auto (natuurlijk ordening op nummerplaat)
+	// vervolgens sorteer je voor gelijke auto's op begindatum van het onderhoud
+	public void sorteerOnderhoudLijst() {
+
+	}
+
+	// implementeer:
+	// - indien je dit nog niet deed, implementeer dan eerst de methode
+	// isAangrenzendMet in de klasse Onderhoud
+	// - roep de hulpmethode sorteerOnderhoudLijst aan om de onderhoudLijst
+	// eerst te sorteren, en
+	// - voeg dan alle aangrenzende onderhouden samen tot 1 onderhoud
+	public void voegAangrenzendeOnderhoudenSamen() {
+
+	}
+
+}
