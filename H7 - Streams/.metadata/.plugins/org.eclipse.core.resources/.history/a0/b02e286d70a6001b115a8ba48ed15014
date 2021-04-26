@@ -1,0 +1,48 @@
+package domein;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import persistentie.VliegmaatschappijMapper;
+
+public class DomeinController {
+	private final VliegmaatschappijRepository vliegmijRepository;
+
+	public DomeinController() {
+		this.vliegmijRepository = new VliegmaatschappijRepository();
+	}
+
+	public String geefAirlines() {
+		List<Vliegmaatschappij> alleMaatSchappijen = vliegmijRepository.getMaatschappijen();
+		return zetLijstOmNaarString(alleMaatSchappijen);
+	}
+
+	private String zetLijstOmNaarString(List<Vliegmaatschappij> lijst) {
+		// return lijst.stream().map(vmij ->
+		// vmij.toString()).collect(Collectors.joining(String.format("%n")));
+		return lijst.stream().map(Vliegmaatschappij::toString).collect(Collectors.joining(String.format("%n")));
+	}
+
+	public List<String> geefAlleAirlinesMetMinstensAantalPartners(int aantal) {
+		return vliegmijRepository.geefAlleAirlinesMetMinstensAantalPartners(aantal).stream()
+				.map(Vliegmaatschappij::getNaam).collect(Collectors.toList());
+	}
+
+	public String geefAirlinesAlfabetischGesorteerd() {
+		return zetLijstOmNaarString(vliegmijRepository.geefAirlinesAlfabetischGesorteerd());
+	}
+
+	public String geefAirlinesGesorteerdVolgensAantalPartners() {
+		return zetLijstOmNaarString(vliegmijRepository.geefAirlinesGesorteerdVolgensAantalPartners());
+	}
+
+	public String geefEersteAirlineStartendMet(String woord) {
+		return vliegmijRepository.geefEersteAirlineStartendMet(woord);
+	}
+
+	public String geefEenAirlineMetPartner(String partner) {
+		Vliegmaatschappij vmij = vliegmijRepository.geefEenAirlineMetPartner(partner);
+	}
+
+}
