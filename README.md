@@ -8,6 +8,6 @@ Oefeningen Software Development II\
 <strong>Hoofdstuk 3: Lambda expressies</strong> - volledig\
 <strong>Hoofdstuk 4: Exception handling</strong> - volledig\
 <strong>Hoofdstuk 5: Grafische userinterface - JavaFX</strong> - volledig\
-Hoofdstuk 6: Functioneel programmeren - streams\
-Hoofdstuk 7: Strings & reguliere expressies\
+<strong>Hoofdstuk 6: Functioneel programmeren - streams</strong> - oefening 3 mist\
+<strong>Hoofdstuk 7: Strings & reguliere expressies</strong> - enkel werkcollege\
 Hoofdstuk 8: Bestandsverwerking
