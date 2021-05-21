@@ -6,19 +6,28 @@ public class Comment extends Message {
 
 	protected Comment(String msg, int level) {
 		super(msg);
+		this.level = level;
 	}
 
+	@Override
 	public void add(String msg) {
-		Comment comment = new Comment(msg, 1);
-		add(comment);
+		getComments().add(new Comment(msg, level + 1));
 	}
 
+	@Override
 	public String toString() {
-		if (level == 0) {
-			return String.format("\tLevel %d: %s", level, getMsg());
+		String comment = "";
+
+		for (int i = 0; i < level + 1; i++) {
+			comment += "\t";
 		}
-		return String.format("\t\tLevel %d: %s", level, getMsg());
 
+		comment += String.format("Level %d: %s", level, getMessage());
+
+		for (Comment c : getComments()) {
+			comment += String.format("%n%s", c.toString());
+		}
+
+		return comment;
 	}
-
 }

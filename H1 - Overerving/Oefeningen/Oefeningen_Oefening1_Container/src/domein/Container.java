@@ -1,5 +1,8 @@
 package domein;
 
+import java.io.*;
+import java.util.*;
+
 public class Container {
 
 	private String eigenaar;
@@ -7,6 +10,7 @@ public class Container {
 	private int massa;
 	private final Integer serialNumber;
 
+	// Constructor
 	public Container(String eigenaar, int volume, int massa, int serialNumber) {
 		setEigenaar(eigenaar);
 		setVolume(volume);

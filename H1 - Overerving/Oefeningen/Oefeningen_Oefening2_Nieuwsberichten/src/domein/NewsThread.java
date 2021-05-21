@@ -6,19 +6,19 @@ public class NewsThread extends Message {
 		super(msg);
 	}
 
+	@Override
 	public void add(String msg) {
-		Comment comment = new Comment(msg, 0);
-		add(comment);
+		add(new Comment(msg, 0));
 	}
 
 	@Override
 	public String toString() {
-		String res = getMsg();
-		for (Comment comment : getComments()) {
-			res += "\n";
-			res += comment;
-		}
-		return res;
-	}
+		String string = String.format("%s", getMessage());
 
+		for (Comment c : getComments()) {
+			string += String.format("%n%s", c.toString());
+		}
+
+		return string;
+	}
 }

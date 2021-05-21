@@ -19,7 +19,7 @@ public class ContainerApplicatie {
 
 		// Kijk na of de nieuwe container reeds in de lijst aanwezig is en
 		// druk het resultaat af op het scherm.
-		System.out.printf("%s", containers.contains(nieuweContainer) ? "De container was reeds aanwezig in de lijst."
-				: "De container is toegevoegd aan de lijst", containers.add(nieuweContainer));
+		System.out.println(containers.contains(nieuweContainer) ? "Fout: De container was reeds aanwezig in de lijst."
+				: "De container is toegevoegd in de lijst.");
 	}
 }

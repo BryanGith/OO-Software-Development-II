@@ -5,32 +5,34 @@ import java.util.List;
 
 public abstract class Message {
 	private String msg;
-	private static List<Comment> comments = new ArrayList<>();
+	private List<Comment> comments;
 
 	public Message(String msg) {
-		if (" ".equals(msg) || "\t".equals(msg)) {
-			throw new IllegalArgumentException();
+		setMessage(msg);
+	}
+
+	private void setMessage(String msg) {
+		if (msg == null || msg.isBlank()) {
+			throw new IllegalArgumentException("Een leeg bericht is niet toegestaan!");
 		}
+
 		this.msg = msg;
+	}
+
+	protected String getMessage() {
+		return msg;
+	}
+
+	public List<Comment> getComments() {
+		if (comments == null)
+			comments = new ArrayList<>();
+
+		return comments;
 	}
 
 	public abstract void add(String msg);
 
 	protected void add(Comment comment) {
-		comments.add(comment);
+		getComments().add(comment);
 	}
-
-	public List<Comment> getComments() {
-		return comments;
-
-	}
-
-	protected String getMsg() {
-		return msg;
-	}
-
-	private void setMsg(String msg) {
-		this.msg = msg;
-	}
-
 }
