@@ -1,6 +1,6 @@
 # OO-Software-Development-II
 <strong>DISCLAIMER:</strong>Gelieve geen code van mij te kopiëren op het examen ivm fraude!
-Oefeningen Software Development II\
+Oefeningen Software Development II
 
 <strong>Inhoudstabel:</strong>\
 <strong>Hoofdstuk 1: Overerving deel 2</strong>\
