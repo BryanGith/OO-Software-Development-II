@@ -4,7 +4,7 @@ Oefeningen Software Development II
 
 ## Inhoudstabel
 ### Hoofdstuk 1: Overerving deel 2
-[Werkcollege:] (https://github.com/SebastienVanlede/OO-Software-Development-II/tree/master/H1%20-%20Overerving/Werkcollege)
+[Werkcollege:](https://github.com/SebastienVanlede/OO-Software-Development-II/tree/master/H1%20-%20Overerving/Werkcollege)
 <strong>Hoofdstuk 1: Overerving deel 2</strong>\
 <strong>Hoofdstuk 2: Polymorfisme & interfaces</strong>\
 <strong>Hoofdstuk 3: Lambda expressies</strong>\
